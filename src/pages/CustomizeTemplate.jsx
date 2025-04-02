@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import {
   Save,
   Upload,
@@ -11,6 +12,7 @@ import {
 } from 'lucide-react';
 
 function CustomizeTemplate() {
+  const navigate=useNavigate();
   const [sections, setSections] = useState([
     {
       id: 'enterprise',
@@ -299,7 +301,7 @@ function CustomizeTemplate() {
             <button className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-gray-900">
               Reset Template
             </button>
-            <button className="px-4 py-2 text-sm font-medium text-white bg-indigo-600 rounded-md hover:bg-indigo-700">
+            <button className="px-4 py-2 text-sm font-medium text-white bg-indigo-600 rounded-md hover:bg-indigo-700" onClick={()=>navigate('/')}>
               Save & Apply Template
             </button>
           </div>

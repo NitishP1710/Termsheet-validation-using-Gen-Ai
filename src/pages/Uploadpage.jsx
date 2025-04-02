@@ -203,7 +203,10 @@ function Uploadpage() {
                   </div>
                   {fileStatus === 'complete' && (
                     <div className="flex space-x-4">
-                      <button className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700">
+                      <button
+                        className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700"
+                        onClick={() => navigate('/validation-report')} // Navigate to /validation-report
+                      >
                         <Download className="h-4 w-4 mr-2" />
                         Download Report
                       </button>
